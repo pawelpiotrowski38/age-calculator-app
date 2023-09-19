@@ -46,6 +46,10 @@
     letter-spacing: 2.4px;
 }
 
+.age-calculator__form-label--error {
+    color: var(--light-red);
+}
+
 .age-calculator__form-input {
     padding: 0.6875rem 1rem;
     border: 0.0625rem solid var(--light-grey);
@@ -65,6 +69,10 @@
 
 .age-calculator__form-input:focus {
     border-color: var(--purple);
+}
+
+.age-calculator__form-input--error {
+    border-color: var(--light-red);
 }
 
 .age-calculator__button-container {
@@ -123,6 +131,14 @@
 .age-calculator__result span {
     margin-right: 0.5rem;
     color: var(--purple);
+}
+
+.age-calculator__form-error {
+    margin-top: 0.625rem;
+    font-size: 0.875rem;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--light-red);
 }
 
 @media screen and (min-width: 840px) {
