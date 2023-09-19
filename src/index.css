@@ -23,12 +23,12 @@ body {
     margin: 0;
     padding: 0;
     line-height: 1.3;
-    background-color: var(--light-grey);
+    background-color: var(--off-white);
     font-family: 'Poppins', sans-serif;
     font-size: 2rem;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6, p, input {
     margin: 0;
     padding: 0;
 }
