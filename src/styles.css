@@ -3,11 +3,19 @@
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    /* height: 100%; */
+    height: 100%;
     width: 100%;
 }
 
+/* .main {
+    display: flex;
+    width: 100%;
+    height: 100%;
+} */
+
 .age-calculator {
+    margin: auto;
+    width: 343px;
     /* margin-top: 5.5rem; */
     padding: 3rem 1.5rem 2.625rem 1.5rem;
     border-radius: 1.375rem;
@@ -41,7 +49,7 @@
 .age-calculator__form-input {
     padding: 0.6875rem 1rem;
     border: 0.0625rem solid var(--light-grey);
-    border-radius: 0.375rem;
+    border-radius: 0.4375rem;
     outline: none;
     width: 5.5rem;
     font-family: 'Poppins', 'sans-serif';
@@ -79,7 +87,7 @@
     position: absolute;
     top: 0;
     left: 50%;
-    transform: translate(-50%, -48%);
+    transform: translate(-50%, -50%);
     border: none;
     outline: none;
     width: 4rem;
@@ -91,6 +99,8 @@
 }
 
 .button img {
+    position: relative;
+    top: 0.125rem;
     width: 1.5rem;
 }
 
@@ -111,5 +121,64 @@
 }
 
 .age-calculator__result span {
+    margin-right: 0.5rem;
     color: var(--purple);
+}
+
+@media screen and (min-width: 840px) {
+    .age-calculator {
+        width: 840px;
+        padding: 3.5625rem 3.5rem 2.875rem 3.5rem;
+        border-bottom-right-radius: 12.25rem;
+    }
+
+    .age-calculator__form-items {
+        justify-content: flex-start;
+    }
+
+    .age-calculator__form-items > :not(:last-child) {
+        margin-right: 2rem;
+    }
+
+    .age-calculator__form-label {
+        margin-bottom: 0.625rem;
+        font-size: 0.875rem;
+        letter-spacing: 3.5px;
+    }
+
+    .age-calculator__form-input {
+        width: 10rem;
+        padding: 0.625rem 1.5rem;
+        font-size: 2rem;
+    }
+
+    .age-calculator__button-container {
+        margin-top: 3rem;
+        margin-bottom: 2.25rem;
+    }
+
+    .button {
+        top: 0;
+        left: 93.5%;
+        
+        width: 6rem;
+        height: 6rem;
+    }
+
+    .button img {
+        width: 3rem;
+    }
+
+    .age-calculator__results > :not(:last-child) {
+        margin-bottom: -1.3125rem;
+    }
+
+    .age-calculator__result {
+        font-size: 6.5rem;
+        letter-spacing: -2px;
+    }
+
+    .age-calculator__result span {
+        margin-right: 0.75rem;
+    }
 }

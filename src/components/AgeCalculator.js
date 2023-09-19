@@ -48,13 +48,13 @@ export default function AgeCalculator() {
             </form>
             <div className='age-calculator__results'>
                 <p className='age-calculator__result'>
-                    <span>38</span> years
+                    <span>--</span>years
                 </p>
                 <p className='age-calculator__result'>
-                    <span>3</span> months
+                    <span>--</span>months
                 </p>
                 <p className='age-calculator__result'>
-                    <span>26</span> days
+                    <span>--</span>days
                 </p>
             </div>
         </section>
