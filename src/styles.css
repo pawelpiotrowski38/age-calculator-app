@@ -14,12 +14,12 @@
 } */
 
 .age-calculator {
-    margin: auto;
+    margin: 1rem auto;
     width: 343px;
     /* margin-top: 5.5rem; */
     padding: 3rem 1.5rem 2.625rem 1.5rem;
     border-radius: 1.375rem;
-    border-bottom-right-radius: 5.875rem;
+    border-bottom-right-radius: 6.25rem;
     background-color: var(--white);
 }
 
@@ -121,6 +121,9 @@
 }
 
 .age-calculator__result {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
     font-style: italic;
     font-weight: 800;
     font-size: 3.5rem;
@@ -128,8 +131,19 @@
     letter-spacing: -1px;
 }
 
-.age-calculator__result span {
+.age-calculator__result-value {
     margin-right: 0.5rem;
+}
+
+.age-calculator__result-none {
+    margin-right: 0.625rem;
+}
+
+.age-calculator__result-none span:not(:last-child) {
+    margin-right: 1.1875rem;
+}
+
+.age-calculator__result span {
     color: var(--purple);
 }
 
@@ -146,7 +160,7 @@
     .age-calculator {
         width: 840px;
         padding: 3.5625rem 3.5rem 2.875rem 3.5rem;
-        border-bottom-right-radius: 12.25rem;
+        border-bottom-right-radius: 12.375rem;
     }
 
     .age-calculator__form-items {
@@ -165,18 +179,18 @@
 
     .age-calculator__form-input {
         width: 10rem;
-        padding: 0.625rem 1.5rem;
+        padding: 0.625rem 1.4375rem 0.6875rem 1.4375rem;
         font-size: 2rem;
     }
 
     .age-calculator__button-container {
-        margin-top: 3rem;
+        margin-top: 2.9375rem;
         margin-bottom: 2.25rem;
     }
 
     .button {
-        top: 0;
-        left: 93.5%;
+        top: 0.0625rem;
+        left: 93.4%;
         
         width: 6rem;
         height: 6rem;
@@ -195,8 +209,16 @@
         letter-spacing: -2px;
     }
 
-    .age-calculator__result span {
-        margin-right: 0.75rem;
+    .age-calculator__result-value {
+        margin-right: 0.6875rem;
+    }
+
+    .age-calculator__result-none {
+        margin-right: 0.6875rem;
+    }
+    
+    .age-calculator__result-none span:not(:last-child) {
+        margin-right: 1.1875rem;
     }
 
     .age-calculator__form-error {
