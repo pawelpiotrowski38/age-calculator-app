@@ -1,4 +1,5 @@
 import { useState } from "react"
+import AgeCalculatorFormItem from "./AgeCalculatorFormItem";
 
 export default function AgeCalculatorForm({ setResult, setIsResult }) {
     const [day, setDay] = useState("");
@@ -136,54 +137,9 @@ export default function AgeCalculatorForm({ setResult, setIsResult }) {
     return (
         <form className='age-calculator__form' onSubmit={handleSubmit}>
             <div className='age-calculator__form-items'>
-                <div className='age-calculator__form-item'>
-                    <label
-                        className={`age-calculator__form-label ${dayError ? 'age-calculator__form-label--error' : ''}`}
-                        htmlFor='day'
-                    >
-                        DAY
-                    </label>
-                    <input
-                        className={`age-calculator__form-input ${dayError ? 'age-calculator__form-input--error' : ''}`}
-                        id='day'
-                        name='day'
-                        placeholder='DD'
-                        value={day}
-                        onChange={(e) => setDay(e.target.value)}
-                    />
-                </div>
-                <div className='age-calculator__form-item'>
-                    <label
-                        className={`age-calculator__form-label ${monthError ? 'age-calculator__form-label--error' : ''}`}
-                        htmlFor='month'
-                    >
-                        MONTH
-                    </label>
-                    <input
-                        className={`age-calculator__form-input ${monthError ? 'age-calculator__form-input--error' : ''}`}
-                        id='month'
-                        name='month'
-                        placeholder='MM'
-                        value={month}
-                        onChange={(e) => setMonth(e.target.value)}
-                    />
-                </div>
-                <div className='age-calculator__form-item'>
-                    <label
-                        className={`age-calculator__form-label ${yearError ? 'age-calculator__form-label--error' : ''}`}
-                        htmlFor='year'
-                    >
-                        YEAR
-                    </label>
-                    <input
-                        className={`age-calculator__form-input ${yearError ? 'age-calculator__form-input--error' : ''}`}
-                        id='year'
-                        name='year'
-                        placeholder='YYYY'
-                        value={year}
-                        onChange={(e) => setYear(e.target.value)}
-                    />
-                </div>
+                <AgeCalculatorFormItem id='day' value={day} setValue={setDay} error={dayError} placeholder='DD' />
+                <AgeCalculatorFormItem id='month' value={month} setValue={setMonth} error={monthError} placeholder='MM' />
+                <AgeCalculatorFormItem id='year' value={year} setValue={setYear} error={yearError} placeholder='YYYY' />
             </div>
             {(dayError || monthError || yearError) && (
                 <div className="age-calculator__form-items">
