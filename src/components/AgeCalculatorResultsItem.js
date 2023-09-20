@@ -3,7 +3,7 @@ import '../styles/AgeCalculatorResultsItem.css';
 
 export default function AgeCalculatorResultsItem({ isResult, result, text }) {
     const [currentValue, setCurrentValue] = useState(0);
-    const animationTime = 500;
+    const animationTime = 400;
 
     useEffect(() => {
         let startTimestamp;
