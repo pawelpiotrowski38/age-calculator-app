@@ -1,0 +1,45 @@
+.age-calculator-results-item {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-style: italic;
+    font-weight: 800;
+    font-size: 3.5rem;
+    color: var(--off-black);
+    letter-spacing: -1px;
+}
+
+.age-calculator-results-item span {
+    color: var(--purple);
+}
+
+.age-calculator-results-item__value {
+    margin-right: 0.5rem;
+}
+
+.age-calculator-results-item__none {
+    margin-right: 0.5rem;
+}
+
+.age-calculator-results-item__none span:not(:last-child) {
+    margin-right: 0.375rem;
+}
+
+@media screen and (min-width: 840px) {
+    .age-calculator-results-item {
+        font-size: 6.5rem;
+        letter-spacing: -2px;
+    }
+
+    .age-calculator-results-item__value {
+        margin-right: 0.6875rem;
+    }
+
+    .age-calculator-results-item__none {
+        margin-right: 0.6875rem;
+    }
+    
+    .age-calculator-results-item__none span:not(:last-child) {
+        margin-right: 1.1875rem;
+    }
+}

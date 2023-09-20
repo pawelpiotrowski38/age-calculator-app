@@ -2,52 +2,8 @@
     margin-bottom: -0.6875rem;
 }
 
-.age-calculator-results__result {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    font-style: italic;
-    font-weight: 800;
-    font-size: 3.5rem;
-    color: var(--off-black);
-    letter-spacing: -1px;
-}
-
-.age-calculator-results__result--value {
-    margin-right: 0.5rem;
-}
-
-.age-calculator-results__result--none {
-    margin-right: 0.625rem;
-}
-
-.age-calculator-results__result--none span:not(:last-child) {
-    margin-right: 1.1875rem;
-}
-
-.age-calculator-results__result span {
-    color: var(--purple);
-}
-
 @media screen and (min-width: 840px) {
     .age-calculator-results > :not(:last-child) {
         margin-bottom: -1.3125rem;
-    }
-
-    .age-calculator-results__result {
-        font-size: 6.5rem;
-        letter-spacing: -2px;
-    }
-
-    .age-calculator-results__result--value {
-        margin-right: 0.6875rem;
-    }
-
-    .age-calculator-results__result--none {
-        margin-right: 0.6875rem;
-    }
-    
-    .age-calculator-results__result--none span:not(:last-child) {
-        margin-right: 1.1875rem;
     }
 }
