@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/age-calculator-app-using-react-qCZZr8f3uK)
-- Live Site URL: [Add live site URL here](https://marvelous-tartufo-b19dc2.netlify.app/)
+- Solution URL: [[Add solution URL here](https://www.frontendmentor.io/solutions/age-calculator-app-using-react-qCZZr8f3uK)](https://www.frontendmentor.io/solutions/age-calculator-app-using-react-qCZZr8f3uK)
+- Live Site URL: [[Add live site URL here](https://marvelous-tartufo-b19dc2.netlify.app/)](https://marvelous-tartufo-b19dc2.netlify.app/)
 
 ## Author
 
