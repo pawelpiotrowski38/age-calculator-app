@@ -4,12 +4,17 @@ import AgeCalculatorForm from './AgeCalculatorForm';
 import AgeCalculatorResults from './AgeCalculatorResults';
 
 export default function AgeCalculator() {
+    const [result, setResult] = useState({
+        years: "",
+        months: "",
+        days: "",
+    })
     const [isResult, setIsResult] = useState(false);
 
     return (
         <section className="age-calculator">
-            <AgeCalculatorForm />
-            <AgeCalculatorResults isResult={isResult} />
+            <AgeCalculatorForm setResult={setResult} setIsResult={setIsResult}/>
+            <AgeCalculatorResults isResult={isResult} result={result} />
         </section>
     )
 }

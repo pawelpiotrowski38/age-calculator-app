@@ -1,38 +1,38 @@
-export default function AgeCalculatorResults({ isResult }) {
+export default function AgeCalculatorResults({ isResult, result }) {
     return (
         <div className='age-calculator__results'>
             <p className='age-calculator__result'>
                 {isResult ? (
-                    <span>28</span>
+                    <span>{result.years}</span>
                 ) : (
                     <>
                         <span>-</span>
                         <span>-</span>
                     </>
                 )}
-                years
+                {result.years === 1 ? 'year' : 'years'}
             </p>
             <p className='age-calculator__result'>
                 {isResult ? (
-                    <span>3</span>
+                    <span>{result.months}</span>
                 ) : (
                     <>
                         <span>-</span>
                         <span>-</span>
                     </>
                 )}
-                months
+                {result.months === 1 ? 'month' : 'months'}
             </p>
             <p className='age-calculator__result'>
                 {isResult ? (
-                    <span>12</span>
+                    <span>{result.days}</span>
                 ) : (
                     <>
                         <span>-</span>
                         <span>-</span>
                     </>
                 )}
-                days
+                {result.days === 1 ? 'day' : 'days'}
             </p>
         </div>
     )

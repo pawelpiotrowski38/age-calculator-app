@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-export default function AgeCalculatorForm() {
+export default function AgeCalculatorForm({ setResult, setIsResult }) {
     const [day, setDay] = useState("");
     const [month, setMonth] = useState("");
     const [year, setYear] = useState("");
@@ -8,7 +8,29 @@ export default function AgeCalculatorForm() {
     const [monthError, setMonthError] = useState("");
     const [yearError, setYearError] = useState("");
 
-    const validateDay = function(day) {
+    const validateFields = function() {
+        const dayValidation = validateDay();
+        const monthValidation = validateMonth();
+        const yearValidation = validateYear();
+
+        setDayError(dayValidation);
+        setMonthError(monthValidation);
+        setYearError(yearValidation);
+
+        return !dayValidation && !monthValidation && !yearValidation;
+    }
+
+    const validateDate = function() {
+        const pastDateValidation = validatePastDate();
+        const wrongDayValidation = validateWrongDay();
+
+        setYearError(pastDateValidation);
+        setDayError(wrongDayValidation);
+
+        return !pastDateValidation && !wrongDayValidation;
+    }
+
+    const validateDay = function() {
         if (day.length === 0) {
             return "This field is required";
         }
@@ -21,7 +43,7 @@ export default function AgeCalculatorForm() {
         return ""
     }
 
-    const validateMonth = function(month) {
+    const validateMonth = function() {
         if (month.length === 0) {
             return "This field is required";
         }
@@ -34,7 +56,7 @@ export default function AgeCalculatorForm() {
         return ""
     }
 
-    const validateYear = function(year) {
+    const validateYear = function() {
         if (year.length === 0) {
             return "This field is required";
         }
@@ -52,24 +74,63 @@ export default function AgeCalculatorForm() {
         return ""
     }
 
+    const validatePastDate = function() {
+        const currentDate = new Date();
+        const enteredDate = new Date(year, month - 1, day);
+
+        if (enteredDate > currentDate) {
+            return "Must be in the past";
+        }
+
+        return "";
+    }
+
+    const validateWrongDay = function() {
+        const maxDaysInMonth = new Date(year, month, 0).getDate();
+        if (day > maxDaysInMonth) {
+            return "Must be a valid day";
+        }
+
+        return "";
+    }
+
     const handleSubmit = function(event) {
         event.preventDefault();
 
-        setDayError(validateDay(day));
-        setMonthError(validateMonth(month));
-        setYearError(validateYear(year));
-
-        const currentDate = new Date();
-        const enteredDate = new Date(year, month - 1, day);
-        if (enteredDate > currentDate) {
-            setYearError("Must be in the past");
+        if (!validateFields() || !validateDate()) {
+            setIsResult(false);
             return;
         }
 
-        const maxDaysInMonth = new Date(year, month, 0).getDate();
-        if (day > maxDaysInMonth) {
-            setDayError("Must be a valid day");
+        const currentDate = new Date();
+
+        let yearsDiff = currentDate.getFullYear() - year;
+        let monthsDiff = currentDate.getMonth() - (month-1);
+        let daysDiff = currentDate.getDate() - day;
+
+        if (daysDiff < 0) {
+            const prevMonthDays = new Date(
+                currentDate.getFullYear(),
+                currentDate.getMonth(),
+                0
+            ).getDate();
+
+            daysDiff += prevMonthDays;
+            monthsDiff--;
         }
+        
+        if (monthsDiff < 0) {
+            monthsDiff += 12;
+            yearsDiff--;
+        }
+
+        setResult(prevResult => ({
+            ...prevResult,
+            years: yearsDiff,
+            months: monthsDiff,
+            days: daysDiff
+        }));
+        setIsResult(true);
     }
 
     return (
