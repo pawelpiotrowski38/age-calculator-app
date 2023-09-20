@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import '../styles.css';
 import AgeCalculatorForm from './AgeCalculatorForm';
 import AgeCalculatorResults from './AgeCalculatorResults';
+import '../styles/AgeCalculator.css';
 
 export default function AgeCalculator() {
     const [result, setResult] = useState({

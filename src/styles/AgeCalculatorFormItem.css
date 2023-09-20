@@ -1,0 +1,52 @@
+.age-calculator-form-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.age-calculator-form-item__label {
+    margin-bottom: 0.3125rem;
+    color: var(--smokey-grey);
+    font-size: 0.8125rem;
+    letter-spacing: 2.4px;
+}
+
+.age-calculator-form-item__label--error {
+    color: var(--light-red);
+}
+
+.age-calculator-form-item__input {
+    padding: 0.6875rem 1rem;
+    border: 0.0625rem solid var(--light-grey);
+    border-radius: 0.4375rem;
+    outline: none;
+    width: 5.5rem;
+    font-family: 'Poppins', 'sans-serif';
+    font-size: 1.25rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+}
+
+.age-calculator-form-item__input:hover,
+.age-calculator-form-item__input:focus {
+    border-color: var(--purple);
+}
+
+.age-calculator-form-item__input--error {
+    border-color: var(--light-red);
+}
+
+@media screen and (min-width: 840px) {
+    .age-calculator-form-item__label {
+        margin-bottom: 0.625rem;
+        font-size: 0.875rem;
+        letter-spacing: 3.5px;
+    }
+
+    .age-calculator-form-item__input {
+        width: 10rem;
+        padding: 0.625rem 1.4375rem 0.6875rem 1.4375rem;
+        font-size: 2rem;
+    }
+}

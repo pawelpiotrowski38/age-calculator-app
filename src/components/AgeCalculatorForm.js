@@ -1,5 +1,6 @@
 import { useState } from "react"
 import AgeCalculatorFormItem from "./AgeCalculatorFormItem";
+import '../styles/AgeCalculatorForm.css';
 
 export default function AgeCalculatorForm({ setResult, setIsResult }) {
     const [day, setDay] = useState("");
@@ -135,22 +136,22 @@ export default function AgeCalculatorForm({ setResult, setIsResult }) {
     }
 
     return (
-        <form className='age-calculator__form' onSubmit={handleSubmit}>
-            <div className='age-calculator__form-items'>
+        <form className='age-calculator-form' onSubmit={handleSubmit}>
+            <div className='age-calculator-form__items'>
                 <AgeCalculatorFormItem id='day' value={day} setValue={setDay} error={dayError} placeholder='DD' />
                 <AgeCalculatorFormItem id='month' value={month} setValue={setMonth} error={monthError} placeholder='MM' />
                 <AgeCalculatorFormItem id='year' value={year} setValue={setYear} error={yearError} placeholder='YYYY' />
             </div>
             {(dayError || monthError || yearError) && (
-                <div className="age-calculator__form-items">
-                    <p className="age-calculator__form-error">{dayError}</p>
-                    <p className="age-calculator__form-error">{monthError}</p>
-                    <p className="age-calculator__form-error">{yearError}</p>
+                <div className="age-calculator-form__items">
+                    <p className="age-calculator-form__error">{dayError}</p>
+                    <p className="age-calculator-form__error">{monthError}</p>
+                    <p className="age-calculator-form__error">{yearError}</p>
                 </div>
             ) }
-            <div className='age-calculator__button-container'>
-                <span className='age-calculator__button-container-span'></span>
-                <button className='button'>
+            <div className='age-calculator-form__button-container'>
+                <span className='age-calculator-form__button-container-span'></span>
+                <button className='age-calculator-form__button'>
                     <img src='/images/icon-arrow.svg' alt="calculate" />
                 </button>
             </div>

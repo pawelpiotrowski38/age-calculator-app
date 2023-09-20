@@ -1,0 +1,90 @@
+.age-calculator-form__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.age-calculator-form__items > :not(:last-child) {
+    margin-right: 1rem;
+}
+
+.age-calculator-form__button-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 3.9325rem;
+    margin-bottom: 3.625rem;
+}
+
+.age-calculator-form__button-container-span {
+    display: block;
+    width: 100%;
+    height: 0.125rem;
+    background-color: var(--off-white);
+}
+
+.age-calculator-form__button {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: none;
+    outline: none;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: var(--purple);
+    cursor: pointer;
+    transition: all 0.25s ease-in-out;
+}
+
+.age-calculator-form__button img {
+    position: relative;
+    top: 0.125rem;
+    width: 1.5rem;
+}
+
+.age-calculator-form__button:hover {
+    background-color: var(--off-black);
+}
+
+.age-calculator-form__error {
+    width: 5.5rem;
+    margin-top: 0.625rem;
+    font-size: 0.875rem;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--light-red);
+}
+
+@media screen and (min-width: 840px) {
+    .age-calculator-form__items {
+        justify-content: flex-start;
+    }
+
+    .age-calculator-form__items > :not(:last-child) {
+        margin-right: 2rem;
+    }
+
+    .age-calculator-form__button-container {
+        margin-top: 2.9375rem;
+        margin-bottom: 2.25rem;
+    }
+
+    .age-calculator-form__button {
+        top: 0.0625rem;
+        left: 93.4%;
+        
+        width: 6rem;
+        height: 6rem;
+    }
+
+    .age-calculator-form__button img {
+        width: 3rem;
+    }
+
+    .age-calculator-form__error {
+        width: 10rem;
+    }
+}
