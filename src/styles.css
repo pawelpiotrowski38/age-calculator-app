@@ -134,6 +134,7 @@
 }
 
 .age-calculator__form-error {
+    width: 5.5rem;
     margin-top: 0.625rem;
     font-size: 0.875rem;
     font-weight: 400;
@@ -196,5 +197,9 @@
 
     .age-calculator__result span {
         margin-right: 0.75rem;
+    }
+
+    .age-calculator__form-error {
+        width: 10rem;
     }
 }

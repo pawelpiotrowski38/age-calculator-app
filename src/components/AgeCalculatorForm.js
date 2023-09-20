@@ -10,13 +10,11 @@ export default function AgeCalculatorForm() {
 
     const validateDay = function(day) {
         if (day.length === 0) {
-            console.log('empty day');
             return "This field is required";
         }
 
         const convertedDay = Number(day);
         if (!convertedDay || convertedDay < 1 || convertedDay > 31) {
-            console.log('invalid day');
             return "Must be a valid day";
         }
 
@@ -69,7 +67,6 @@ export default function AgeCalculatorForm() {
         }
 
         const maxDaysInMonth = new Date(year, month, 0).getDate();
-        console.log(maxDaysInMonth);
         if (day > maxDaysInMonth) {
             setDayError("Must be a valid day");
         }
@@ -93,9 +90,6 @@ export default function AgeCalculatorForm() {
                         value={day}
                         onChange={(e) => setDay(e.target.value)}
                     />
-                    {dayError && (
-                        <p className="age-calculator__form-error">{dayError}</p>
-                    )}
                 </div>
                 <div className='age-calculator__form-item'>
                     <label
@@ -112,9 +106,6 @@ export default function AgeCalculatorForm() {
                         value={month}
                         onChange={(e) => setMonth(e.target.value)}
                     />
-                    {monthError && (
-                        <p className="age-calculator__form-error">{monthError}</p>
-                    )}
                 </div>
                 <div className='age-calculator__form-item'>
                     <label
@@ -131,15 +122,19 @@ export default function AgeCalculatorForm() {
                         value={year}
                         onChange={(e) => setYear(e.target.value)}
                     />
-                    {yearError && (
-                        <p className="age-calculator__form-error">{yearError}</p>
-                    )}
                 </div>
             </div>
+            {(dayError || monthError || yearError) && (
+                <div className="age-calculator__form-items">
+                    <p className="age-calculator__form-error">{dayError}</p>
+                    <p className="age-calculator__form-error">{monthError}</p>
+                    <p className="age-calculator__form-error">{yearError}</p>
+                </div>
+            ) }
             <div className='age-calculator__button-container'>
                 <span className='age-calculator__button-container-span'></span>
                 <button className='button'>
-                    <img src='/images/icon-arrow.svg' alt="arrow" />
+                    <img src='/images/icon-arrow.svg' alt="calculate" />
                 </button>
             </div>
         </form>
