@@ -6,8 +6,10 @@ This is a solution to the [Age calculator app challenge on Frontend Mentor](http
 
 - [Overview](#overview)
   - [The challenge](#the-challenge)
-  - [Screenshot](#screenshot)
-  - [Links](#links)
+- [Screenshots](#screenshots)
+  - [Light theme](#light-theme)
+  - [Dark theme](#dark-theme)
+- [Links](#links)
 - [Author](#author)
 
 ## Overview
@@ -27,11 +29,17 @@ Users should be able to:
 - See hover and focus states for all interactive elements on the page
 - **Bonus**: See the age numbers animate to their final number when the form is submitted
 
-### Screenshot
+## Screenshots
 
-![](./screenshot.png)
+### Light theme
 
-### Links
+![](./screenshots/light-theme.png)
+
+### Dark theme
+
+![](./screenshots/dark-theme.png)
+
+## Links
 
 - Solution URL: [Solution on Frontend Mentor](https://www.frontendmentor.io/solutions/age-calculator-app-using-react-qCZZr8f3uK)
 - Live Site URL: [Live Site](https://marvelous-tartufo-b19dc2.netlify.app/)
