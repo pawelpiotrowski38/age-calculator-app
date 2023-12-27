@@ -6,9 +6,10 @@
 
 .age-calculator-form-item__label {
     margin-bottom: 0.3125rem;
-    color: var(--smokey-grey);
+    color: var(--secondary-text);
     font-size: 0.8125rem;
     letter-spacing: 2.4px;
+    transition: all 0.25s ease-in-out;
 }
 
 .age-calculator-form-item__label--error {
@@ -17,8 +18,10 @@
 
 .age-calculator-form-item__input {
     padding: 0.6875rem 1rem;
-    border: 0.0625rem solid var(--light-grey);
+    border: 0.0625rem solid var(--border);
     border-radius: 0.4375rem;
+    background-color: var(--component-background);
+    color: var(--primary-text);
     outline: none;
     width: 5.5rem;
     font-family: 'Poppins', 'sans-serif';

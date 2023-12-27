@@ -1,0 +1,15 @@
+.theme-switch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2rem;
+}
+
+.theme-switch svg {
+    stroke: var(--primary-text);
+    fill: var(--primary-text);
+}
+
+.theme-switch:hover {
+    cursor: pointer;
+}

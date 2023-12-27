@@ -21,7 +21,8 @@
     display: block;
     width: 100%;
     height: 0.125rem;
-    background-color: var(--off-white);
+    background-color: var(--main-background);
+    transition: all 0.25s ease-in-out;
 }
 
 .age-calculator-form__button {
@@ -46,7 +47,7 @@
 }
 
 .age-calculator-form__button:hover {
-    background-color: var(--off-black);
+    background-color: var(--button-hover);
 }
 
 .age-calculator-form__error {

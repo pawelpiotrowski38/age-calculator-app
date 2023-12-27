@@ -1,10 +1,18 @@
 .age-calculator {
+    position: relative;
     margin: auto;
     width: 343px;
     padding: 3rem 1.5rem 2.625rem 1.5rem;
     border-radius: 1.375rem;
     border-bottom-right-radius: 6.25rem;
-    background-color: var(--white);
+    background-color: var(--component-background);
+    transition: all 0.25s ease-in-out;
+}
+
+.age-calculator__theme-switch-container {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
 }
 
 @media screen and (min-width: 840px) {
@@ -12,5 +20,10 @@
         width: 840px;
         padding: 3.5625rem 3.5rem 2.875rem 3.5rem;
         border-bottom-right-radius: 12.375rem;
+    }
+
+    .age-calculator__theme-switch-container {
+        top: 1.25rem;
+        right: 1.25rem;
     }
 }
